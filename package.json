@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build"
+    "build": "npm run build",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,10 @@
     "graphql-tools": "^8.2.0",
     "knex": "^1.0.3",
     "knex-schema-inspector": "^1.7.5",
-    "pg": "^8.7.3"
+    "pg": "^8.7.3",
+    "unit.js": "^2.1.1"
+  },
+  "devDependencies": {
+    "mocha": "^9.2.1"
   }
 }

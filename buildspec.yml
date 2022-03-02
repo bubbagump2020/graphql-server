@@ -5,14 +5,20 @@ phases:
     runtime-versions:
       nodejs: 14
     commands:
-      - npm i pm2 -g
+      - npm install pm2 -g
+      - npm install -g mocha
   pre_build:
     commands:
       - echo Installing source NPM dependencies
       - npm install
+      - npm install unit.js
   build:
     commands:
-      - npm run build
+      - npm run test
+      - mocha test.js
 artifacts:
   files:
-    - '**/*'
+    - index.js
+    - knexfile.js
+    - database.js
+    - package.json
