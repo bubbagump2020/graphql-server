@@ -6,7 +6,7 @@ phases:
       nodejs: 16
     commands:
       - npm i pm2 -g
-  pre-build:
+  pre_build:
     commands:
       - echo Installing source NPM dependencies
       - npm install
@@ -17,4 +17,3 @@ artifacts:
   files:
     - '**/*'
   base-directory: 'build'
-      
