@@ -22,3 +22,4 @@ artifacts:
     - knexfile.js
     - database.js
     - package.json
+    - appspec.yml
