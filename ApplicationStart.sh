@@ -2,7 +2,9 @@
 
 echo "changing directory to ~/PathfinderEncyclopediaServer"
 cd ~/PathfinderEncyclopediaServer
-echo "running npm install"
-npm install
+echo "running npm install for node modules"
+sudo npm i
+echo "running npm i pm2"
+sudo npm i pm2
 echo "starting the server"
-node index.js
+sudo pm2 start index.js
