@@ -5,10 +5,10 @@ files:
     destination: /home/ubuntu/PathfinderEncyclopediaServer
 hooks:
   AfterInstall:
-    - location: bin/after_install.sh
+    - location: AfterInstall.sh
       timeout: 300
       runas: ubuntu
   ApplicationStart:
-    - location: bin/application_start.sh
+    - location: ApplicationStart.sh
       timeout: 300
       runas: ubuntu
