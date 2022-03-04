@@ -36,20 +36,20 @@ const cors = require('cors');
 
 const typeDefs = gql`
    type Spell {
-      SPELL_ID: Int
-      SPELL_NAME: String
-      SPELL_SCHOOL: String
-      SPELL_LEVEL: Int
-      SPELL_CAST_TIME: String
-      SPELL_COMPONENTS: String
-      SPELL_RANGE: String
-      SPELL_TARGET_OR_AREA: String
-      SPELL_EFFECT: String
-      SPELL_DURATION: String
-      SPELL_SAVING_THROW: String
-      SPELL_SPELL_RESIST: String
-      SPELL_DESCRIPTION: String
-      RULEBOOK: String
+      id: Int
+      name: String
+      school: String
+      cast_time: String
+      components: String
+      range: String
+      target_or_area: String
+      effect: String
+      duration: String
+      saving_throw: String
+      resist: String
+      description: String
+      rulebook: String
+      classes: [String]
    }
    type Query {
       spells: [Spell]
@@ -59,7 +59,7 @@ const typeDefs = gql`
 const resolvers = {
    Query: {
       spells: async () => {
-         const spells = database.withSchema('starlight_schema').select().table('ALL_SPELLS');
+         const spells = database.withSchema('starlight_schema').select().table('SPELLS');
          return spells;
       }
    }
