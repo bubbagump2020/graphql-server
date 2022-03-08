@@ -3,37 +3,6 @@ const { ApolloServer, gql } = require('apollo-server-express');
 const database = require('./database');
 const cors = require('cors');
 
-// current production
-// const typeDefs = gql`
-//    type PLAYER {
-//       PLAYER_ID: Int
-//       PLAYER_NAME: String
-//       DUNGEON_MASTER: Boolean
-//       ACTIVE: Boolean
-//       PHONE_NUMBER: String
-//       EMAIL: String
-//    }
-//    type WIZ_SOR_SPELL {
-//       WSS_ID: Int
-//       WSS_NAME: String
-//       WSS_SCHOOL: String
-//       WSS_LEVEL: Int
-//       WSS_CAST_TIME: String
-//       WSS_COMPONENTS: String
-//       WSS_RANGE: String
-//       WSS_EFFECT: String
-//       WSS_DURATION: String
-//       WSS_SAVING_THROW: String
-//       WSS_SPELL_RESIST: String
-//       WSS_DESCRIPTION: String
-//       RULEBOOK: String
-//    }
-//    type Query {
-//       players: [PLAYER]
-//       wizardSpells: [WIZ_SOR_SPELL]
-//    }
-// `
-
 const typeDefs = gql`
    type Spell {
       id: Int
