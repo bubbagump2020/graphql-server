@@ -5,11 +5,11 @@
 const knex = require('knex')({
     client: 'postgresql',
     connection: {
-        host: 'project-starlight-database.cidcg5bmrsjg.us-east-2.rds.amazonaws.com',
-        port: 5432,
-        user: 'starlight_admin',
-        password: 'Tiger315!',
-        database: 'project_starlight'
+        host: process.env.DATABASE_URL,
+        port: process.env.PORT,
+        user: process.env.DATABASE_USER,
+        password: process.env.DATABASE_PASSWORD,
+        database: process.env.DATABASE_P
     }
 });
 
