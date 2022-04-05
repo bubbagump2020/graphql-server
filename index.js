@@ -25,6 +25,7 @@ const typeDefs = gql`
    }
 `;
 
+// production
 const resolvers = {
    Query: {
       spells: async () => {
@@ -33,6 +34,16 @@ const resolvers = {
       }
    }
 }
+
+// development
+// const resolvers = {
+//    Query: {
+//       spells: async () => {
+//          const spells = database.select().table('spells');
+//          return spells;
+//       }
+//    }
+// }
 
 const app = express();
 let apolloServer = null;
